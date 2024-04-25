@@ -2,7 +2,6 @@
 input_dir="$1"
 output_dir="$2"
 
-
 # Проверка
 if [[ "$#" -ne 2 ]]; then
     echo "Задано не 2 аргумента"
@@ -18,11 +17,16 @@ fi
 # Если нет выходной директории, то создаем 
 mkdir -p "$output_dir"
 
+# Выводим список директорий
+find "$input_dir" -mindepth 1 -type d | while read dir; do
+    dirname=$(basename -- "$dir")
+    echo "$dirname"
+done
 
 # Начало цирка
 find "$input_dir" -type f | while read file; do
     filename=$(basename -- "$file")
-    echo "$filename"
+
     
     # Если нет файла в директории output, то сразу же прокидываем файл туда, иначе..
     if [[ ! -e "$output_dir/$filename" ]]; then
