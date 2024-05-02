@@ -1,3 +1,17 @@
+<p align="center"><img src="https://raw.githubusercontent.com/odb/official-bash-logo/master/assets/Logos/Icons/PNG/512x512.png" width="200px"></p>
+<br/>
+<div align="center"><b>donate 12/10 plz</div>
+<div align="center"><img src="https://img.shields.io/badge/don-paypal-yellow.svg"> 
+                    <img src="https://img.shields.io/badge/don-patreon-yellow.svg">
+                    <img src="https://img.shields.io/badge/don-liberapay-yellow.svg">
+</div>
+
+<br/>
+<h1 align='center'>Table of content</h1>
+
+* [FOREWORD](#foreword)
+
+
 <h1 align='center'>Техническое задание №1</h1>
 
 <h3 color='green' align='left'>Условие задачи (легенда)</h1>
@@ -35,13 +49,14 @@
 пример - есть 2 файла с названием a.txt, в выходной директории будет 2 файла - a.txt и a_1.txt )
 
 <br/>
-<h3 color='green' align='left'>Запуск скрипта</h1>
+<h3 color='#143234' align='left'>Запуск скрипта</h1>
 
 1. Прежде всего нужно разрешить запускать скрипт с помощью команды - sudo chmod +x "Путь до файла" <br/>
 2. Скрипт на своем ПК я запускаю следующим образом - <strong>~/Desktop/TZ1/myScript.sh ~/Desktop/TZ1/input ~/Desktop/TZ1/output</strong> (1 путь - скрипт который запускаем, 2 путь - входная директория, 3 пусть - выходная директория)
 
 Также в репозитории (TZ1 - input, TZ1 - output - моковые папки с помощью которых можно проверить скрипт)
 
+# FOREWORD
 <h1 align='center'>Техническое задание №2</h1>
 <p>Прод упал</p>
 <h1 align='center'>Техническое задание №3</h1>
