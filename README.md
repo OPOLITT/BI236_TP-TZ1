@@ -1,6 +1,5 @@
-<p align="center"><img src="https://raw.githubusercontent.com/odb/official-bash-logo/master/assets/Logos/Icons/PNG/512x512.png" width="200px"></p>
+<p align="center"><img src="https://misterbant.ru/wp-content/uploads/2018/01/spanch-bob.png" width="600px"></p>
 <br/>
-<div align="center"><b>donate 12/10 plz</div>
 <div align="center"><img src="https://img.shields.io/badge/don-paypal-yellow.svg"> 
                     <img src="https://img.shields.io/badge/don-patreon-yellow.svg">
                     <img src="https://img.shields.io/badge/don-liberapay-yellow.svg">
@@ -65,7 +64,11 @@
 ## Запуск скрипта
 
 1. Прежде всего нужно разрешить запускать скрипт с помощью команды - sudo chmod +x "Путь до файла" <br/>
-2. Скрипт на своем ПК я запускаю следующим образом - <strong>~/Desktop/TZ1/myScript.sh ~/Desktop/TZ1/input ~/Desktop/TZ1/output</strong> (1 путь - скрипт который запускаем, 2 путь - входная директория, 3 пусть - выходная директория)
+2. Скрипт на своем ПК я запускаю следующим образом -
+```sh
+~/Desktop/TZ1/myScript.sh ~/Desktop/TZ1/input ~/Desktop/TZ1/output
+```
+(1 путь - скрипт который запускаем, 2 путь - входная директория, 3 пусть - выходная директория)
 
 Также в репозитории (TZ1 - input, TZ1 - output - моковые папки с помощью которых можно проверить скрипт)
 
