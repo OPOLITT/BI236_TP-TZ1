@@ -16,6 +16,7 @@ if [[ ! -d "$input_dir" ]]; then
     exit 1
 fi
 
+
 # Если нет выходной директории, то создаем 
 mkdir -p "$output_dir"
 
@@ -25,20 +26,31 @@ find "$input_dir" -mindepth 1 -type d | while read dir; do
     echo "Реализовано получение списка директорий, находящихся во входной директории - $dirname"
 done
 
-    find "$input_dir" -maxdepth 1 -type f | while IFS= read -r file; do
-        filename=$(basename -- "$file")
 
-        if [ "$filename" != ".DS_Store" ]; then
-            echo "Реализовано получение списка файлов, находящихся непосредственно во входной директории (не во вложенных в нее директориях) - $filename"
-        fi
-    done
-
-# Начало цирка
-find "$input_dir" -type f | while read file; do
+find "$input_dir" -maxdepth 1 -type f | while IFS= read -r file; do
     filename=$(basename -- "$file")
 
-    if [ "$filename" != ".DS_Store" ]; then
-        echo "Реализовано получение списка всех файлов, вложенных во входную директорию - $filename"
+    if [[ "$filename" != ".DS_Store" ]]; then
+        echo "Реализовано получение списка файлов, находящихся непосредственно во входной директории (не во вложенных в нее директориях) - $filename"
+    fi
+done
+
+# Начало цирка + тут обрабатываем файлы которые можно читать  и не читаем '.DS_Store'
+find "$input_dir"  -type f ! -name '.DS_Store' | while IFS= read -r file; do
+    filename=$(basename -- "$file")
+
+    echo "Реализовано получение списка всех файлов, вложенных во входную директорию - $filename"
+
+    # Проверяем на символические ссылки
+    if [[ -L "$file" ]]; then
+        echo "Пропускаем символическую ссылку - $file"
+        continue
+    fi
+    
+    # Проверяем на права чтения
+    if [[ ! -r "$file" ]]; then
+        echo "Нет прав на чтение - $file"
+        continue
     fi
     
     # Если нет файла в директории output, то сразу же прокидываем файл туда, иначе..
