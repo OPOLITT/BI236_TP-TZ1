@@ -1,3 +1,6 @@
+<strong>ОПИСАНИЕ К ТЗ-3 НАХОДИТСЯ В ЭТОМ ФАЙЛЕ ВНИЗУ<stong/>
+
+
 <p align="center"><img src="https://misterbant.ru/wp-content/uploads/2018/01/spanch-bob.png" width="600px"></p>
 <br/>
 <div align="center"><img src="https://img.shields.io/badge/don-paypal-yellow.svg"> 
